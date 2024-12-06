@@ -275,7 +275,7 @@ ORDER BY c.experience_years DESC;
 -- 顯示須包含以下欄位： 專長名稱, coach_total
 SELECT
     s.name "專長名稱",
-    count(cls.*) coach_total
+    count(cls.*) coach_total 
 FROM "COACH_LINK_SKILL" cls 
 LEFT JOIN "SKILL" s ON s.id = cls.skill_id 
 GROUP BY s.name 
